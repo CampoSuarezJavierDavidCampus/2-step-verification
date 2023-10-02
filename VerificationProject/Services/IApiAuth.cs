@@ -1,6 +1,7 @@
 using Domain.Entities;
 
 namespace VerificationProject.Services;
-public interface IApiAuth{
-    (string UriQR, User UserWithSecret) CreateSecret(User u);    
+public interface IAuthService{
+    byte[] CreateQR(ref User u);
+    bool VerifyCode(string secret, string code);
 }

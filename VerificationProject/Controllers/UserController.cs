@@ -2,17 +2,18 @@
 using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using VerificationProject.Dto.Auth;
 using VerificationProject.Services;
 
 namespace VerificationProject.Controllers;
 public class UserController : BaseApiController{
     private readonly ILogger<UserController> _Logger;
     private readonly IUnitOfWork _UnitOfWork;
-    private readonly IApiAuth _Auth;
+    private readonly IAuthService _Auth;
     public UserController(
         ILogger<UserController> logger,
         IUnitOfWork unitOfWork,
-        IApiAuth auth
+        IAuthService auth
     ){
         _Logger = logger;
         _UnitOfWork = unitOfWork;
@@ -26,14 +27,37 @@ public class UserController : BaseApiController{
         
         try{
             User u = await _UnitOfWork.Users.FindFirst(x => x.Id == id);
-            (string UriQR, User UserWithSecret) = _Auth.CreateSecret(u);
+            byte[] QR = _Auth.CreateQR(ref u);            
 
-            _UnitOfWork.Users.Update(UserWithSecret);
+            _UnitOfWork.Users.Update(u);
+            await _UnitOfWork.SaveChanges();
+            return File(QR,"image/png");
+        }
+        catch (Exception ex){
+            _Logger.LogError(ex.Message);
+            return BadRequest("some wrong");
+        }  
+                               
+    }
 
-            UriQR = UriQR.Replace("data:image/png;base64", "");
+    [HttpGet("Verify")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]    
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]    
+    public async Task<ActionResult> Verify([FromBody] AuthVerifyCodeDto data){        
+        try{
 
-            byte[] img = Convert.FromBase64String(UriQR);
-            return File(img,"image/png");
+            User u = await _UnitOfWork.Users.FindFirst(x => x.Id == data.Id);
+            if(u.TwoFactorSecret == null){
+                throw new ArgumentNullException(u.TwoFactorSecret);
+            }
+            var isVerified = _Auth.VerifyCode(u.TwoFactorSecret, data.Code);            
+
+            if(isVerified == true){
+                return Ok("authenticated!!");
+            }
+
+            return Unauthorized();
         }
         catch (Exception ex){
             _Logger.LogError(ex.Message);

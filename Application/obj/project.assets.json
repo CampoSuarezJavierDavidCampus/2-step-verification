@@ -5273,19 +5273,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\APM01-45\\.nuget\\packages\\": {}
+    "/home/skylab-102/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\APM01-45\\Downloads\\2-step-verification\\Application\\Application.csproj",
+      "projectUniqueName": "/home/skylab-102/Desktop/2-step-verification/Application/Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\APM01-45\\Downloads\\2-step-verification\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\APM01-45\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\APM01-45\\Downloads\\2-step-verification\\Application\\obj\\",
+      "projectPath": "/home/skylab-102/Desktop/2-step-verification/Application/Application.csproj",
+      "packagesPath": "/home/skylab-102/.nuget/packages/",
+      "outputPath": "/home/skylab-102/Desktop/2-step-verification/Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\APM01-45\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/skylab-102/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5297,11 +5297,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\APM01-45\\Downloads\\2-step-verification\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\APM01-45\\Downloads\\2-step-verification\\Domain\\Domain.csproj"
+            "/home/skylab-102/Desktop/2-step-verification/Domain/Domain.csproj": {
+              "projectPath": "/home/skylab-102/Desktop/2-step-verification/Domain/Domain.csproj"
             },
-            "c:\\Users\\APM01-45\\Downloads\\2-step-verification\\Persistence\\Persistence.csproj": {
-              "projectPath": "c:\\Users\\APM01-45\\Downloads\\2-step-verification\\Persistence\\Persistence.csproj"
+            "/home/skylab-102/Desktop/2-step-verification/Persistence/Persistence.csproj": {
+              "projectPath": "/home/skylab-102/Desktop/2-step-verification/Persistence/Persistence.csproj"
             }
           }
         }
@@ -5331,7 +5331,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
       }
     }
   }

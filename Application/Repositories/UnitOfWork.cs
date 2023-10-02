@@ -4,9 +4,9 @@ using Persistence;
 
 namespace Application.Repositories;
 public class UnitOfWork : IUnitOfWork, IDisposable{
-    private readonly DbContext _Context;
+    private readonly ApiContext _Context;
     private IUserRepository? _User;
-    public UnitOfWork(DbContext ctx) => _Context = ctx;
+    public UnitOfWork(ApiContext ctx) => _Context = ctx;
 
     public IUserRepository Users => _User ??= new UserRepository(_Context);
 
