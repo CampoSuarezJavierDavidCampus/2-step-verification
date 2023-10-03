@@ -22,3 +22,15 @@ C:/Users/APM01-45/Downloads/2-step-verification/Domain/obj/Debug/net7.0/ref/Doma
 /home/skylab-102/Desktop/2-step-verification/Domain/obj/Debug/net7.0/refint/Domain.dll
 /home/skylab-102/Desktop/2-step-verification/Domain/obj/Debug/net7.0/Domain.pdb
 /home/skylab-102/Desktop/2-step-verification/Domain/obj/Debug/net7.0/ref/Domain.dll
+c:\Users\javie\Desktop\2-step-verification\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\javie\Desktop\2-step-verification\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\javie\Desktop\2-step-verification\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\javie\Desktop\2-step-verification\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\Users\javie\Desktop\2-step-verification\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\javie\Desktop\2-step-verification\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\javie\Desktop\2-step-verification\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\javie\Desktop\2-step-verification\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\2-step-verification\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\javie\Desktop\2-step-verification\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\javie\Desktop\2-step-verification\Domain\obj\Debug\net7.0\Domain.pdb
+c:\Users\javie\Desktop\2-step-verification\Domain\obj\Debug\net7.0\ref\Domain.dll
