@@ -41,9 +41,10 @@ public class AuthService: IAuthService{
     public bool VerifyCode(string secret, string code){   
         //     
         var tfa = new TwoFactorAuth(_Conf["JWTSettings:Issuer"],6,30,Algorithm.SHA256);
+        //? el codigo tiene 1 minuto por defecto hasta que se vence porque posee 30s de discrepancia
         return tfa.VerifyCode( //* valida que el codigo sea generado usando el patron
             secret, //* Patron del Usuario
-            code    //* Codigo generado por la aplicaion de autenticacion
+            code    //* Codigo generado por la aplicaion de autenticacion            
         );
     }
 
