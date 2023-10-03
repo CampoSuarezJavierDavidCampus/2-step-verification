@@ -39,4 +39,4 @@ Implementar un proyecto .NET siguiendo una arquitectura de cuatro capas que perm
 
 5 Al utilizar la aplicación Google Authenticator y registrar el código QR, se generarán códigos de 6 dígitos cada 30 segundos, según la configuración previamente especificada.
 
-[ref1]: Aspose.Words.0a14f7d4-8fb2-4496-a7a2-34fb56e8f1cc.007.png
+[ref1]: ~/Aspose.Words.0a14f7d4-8fb2-4496-a7a2-34fb56e8f1cc.007.png
