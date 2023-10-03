@@ -26,12 +26,12 @@ public class UserController : BaseApiController{
     public async Task<ActionResult> GetQR(long id){        
         
         try{
-            User u = await _UnitOfWork.Users.FindFirst(x => x.Id == id);
-            byte[] QR = _Auth.CreateQR(ref u);            
+            User u = await _UnitOfWork.Users.FindFirst(x => x.Id == id); 
+            byte[] QR = _Auth.CreateQR(ref u);
 
             _UnitOfWork.Users.Update(u);
             await _UnitOfWork.SaveChanges();
-            return File(QR,"image/png");
+            return File(QR,"image/png"); //* se transforman los bytes en una imagen
         }
         catch (Exception ex){
             _Logger.LogError(ex.Message);

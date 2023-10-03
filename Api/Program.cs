@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAplicacionServices();
 
 builder.Services.AddDbContext<ApiContext>(opts =>{
-    string connection = builder.Configuration.GetConnectionString("ConnectionLinux")!;
+    string connection = builder.Configuration.GetConnectionString("ConnectionWindows")!;
     opts.UseMySql(connection, ServerVersion.AutoDetect(connection) );
 });
 
