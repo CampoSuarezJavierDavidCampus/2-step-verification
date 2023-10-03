@@ -37,6 +37,13 @@ public class UserConfiguration : IEntityTypeConfiguration<User>{
         .HasDatabaseName("IX_Username_Email")
         .IsUnique();
         
-                
+        builder.HasData(
+            new {
+                Id = 1,
+                Username = "jcampo1502",
+                Email = "campo.javier1502@gmail.com",
+                CreatedDate = DateTime.Now,
+            }
+        );    
     }
 }

@@ -22,9 +22,9 @@ namespace Persistence.Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
+                        .HasColumnType("int")
                         .HasColumnName("id")
                         .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
@@ -56,6 +56,15 @@ namespace Persistence.Data.Migrations
                         .HasDatabaseName("IX_Username_Email");
 
                     b.ToTable("user", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2023, 10, 3, 8, 21, 15, 930, DateTimeKind.Local).AddTicks(6828),
+                            Email = "campo.javier1502@gmail.com",
+                            Username = "jcampo1502"
+                        });
                 });
 #pragma warning restore 612, 618
         }

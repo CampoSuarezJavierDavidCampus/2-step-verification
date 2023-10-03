@@ -23,7 +23,7 @@ public class UserController : BaseApiController{
     [HttpGet("QR/{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]    
-    public async Task<ActionResult> GetQR(long id){        
+    public async Task<ActionResult> GetQR(int id){        
         
         try{
             User u = await _UnitOfWork.Users.FindFirst(x => x.Id == id); 

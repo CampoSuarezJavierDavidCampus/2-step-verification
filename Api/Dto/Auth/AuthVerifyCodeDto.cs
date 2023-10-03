@@ -6,5 +6,5 @@ public class AuthVerifyCodeDto{
     public string Code { get; set; } = String.Empty;
 
     [Required]
-    public long Id { get; set; }
+    public int Id { get; set; }
 }

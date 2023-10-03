@@ -8,5 +8,5 @@ namespace Application.Repositories;
 public class UserRepository : GenericRepository<User>, IUserRepository{
     public UserRepository(DbContext context) : base(context){}
 
-    public async Task<User?> GetByIdAsync(long id) => await _Entity.FindAsync(id);
+    public async Task<User?> GetByIdAsync(int id) => await _Entity.FindAsync(id);
 }

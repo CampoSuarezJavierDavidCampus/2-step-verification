@@ -19,7 +19,7 @@ namespace Persistence.Data.Migrations
                 name: "user",
                 columns: table => new
                 {
-                    id = table.Column<long>(type: "bigint", nullable: false)
+                    id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     username = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -34,6 +34,11 @@ namespace Persistence.Data.Migrations
                     table.PrimaryKey("PK_user", x => x.id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.InsertData(
+                table: "user",
+                columns: new[] { "id", "createDate", "email", "twoFactorSecret", "username" },
+                values: new object[] { 1, new DateTime(2023, 10, 3, 8, 21, 15, 930, DateTimeKind.Local).AddTicks(6828), "campo.javier1502@gmail.com", null, "jcampo1502" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Username_Email",

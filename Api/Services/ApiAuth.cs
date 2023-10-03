@@ -29,7 +29,7 @@ public class AuthService: IAuthService{
         u.TwoFactorSecret = secret;
 
         var QR = tfa.GetQrCodeImageAsDataUri(
-            u.Email,            //* El Label
+            u.Email,            //* El Label a encriptar en el qr
             u.TwoFactorSecret   //* Patron secreto
         ); //* Genera la uri del QR
 
